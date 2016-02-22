@@ -1,5 +1,6 @@
 'use strict';
 
+var cors = require('cors');
 var ImageSearch = require(process.cwd() + '/app/controllers/imageSearch.server.js');
 
 module.exports = function (app, db) {
@@ -10,10 +11,10 @@ module.exports = function (app, db) {
       res.sendFile(process.cwd() + '/public/index.html');
     });
 
-  app.route('/api/imagesearch')
-    .get(imageSearch.search)
+  app.route('/api/imagesearch/:search')
+    .get(cors(), imageSearch.search)
 
   app.route('/api/latest/imagesearch')
-    .get(imageSearch.latest)
+    .get(cors(), imageSearch.latest)
 
 };

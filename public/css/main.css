@@ -1,65 +1,85 @@
-/****** Main Styling ******/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-}
-
-p {
-	margin: 8px 0 0 0;
-}
-
-.container p {
-	text-align: center;
+	margin: 0;
 	padding: 0;
 }
+
+ul li {
+	list-style: none;
+}
+
+code {
+	font-family: monospace;
+	background-color: #222;
+	color: #00BCD4;
+	padding: 6px;
+	margin: 2px;
+	border-radius: 2px;
+  line-height: 35px;
+}
+
+header {
+	color: #00BCD4;
+	height: 56px;
+	margin: 0 0 14px 0;
+	text-align: center;
+}
+
+
+.container {
+	max-width: 1000px;
+	margin: 20px auto;
+	min-height: 400px;
+}
+
+/****** Header Styling ******/
+
+header p {
+	margin: 16px 0 5px 0;
+}
+
+header a ~ p {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	color: #ECEFF1;
+}
+
 
 /****** Logo Div Styling ******/
 
 img {
-	margin: 20px auto 0 auto;
-	display: block;
+	margin: 0 auto;
+	height: 20px;
+	display: inline-block;
 }
 
-.clementine-text { /* Styling for the Clementine.js text */
-	padding: 0;
-	margin: -25px 0 0 0;
-	font-weight: 500;
-	font-size: 60px;
-	color: #FFA000;
-}
-
-/****** Click Styling ******/
-
-.btn-container {	/* Styling for the div that contains the buttons */
-	margin: -10px auto 0 auto;
+footer {
+	margin: 20px auto o;
 	text-align: center;
 }
 
-.btn {	/* Styling for buttons */
-	margin: 0 8px;
-	color: white;
-	background-color: #00BCD4;
-	display: inline-block;
-	border: 0;
-	font-size: 14px;
-	border-radius: 3px;
-	padding: 10px 5px;
-	width: 100px;
+.sig-text {
+	margin: 0;
+	padding: 0;
+	color: #00BCD4;
+}
+
+.sig-text a, .sig-text a:visited, .sig-text a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #00BCD4;
+}
+
+.clementine-text {
+	padding: 0;
+	margin: 0;
 	font-weight: 500;
+	font-size: 20px;
+	color: #FFA000;
+	display: inline-block;
 }
 
-.btn:focus {	/* Remove outline when hovering over button */
-	outline: none;
-}
-
-.btn:active {	/* Scale the button down by 10% when clicking on button */
-	transform: scale(0.9, 0.9);
-	-webkit-transform: scale(0.9, 0.9);
-	-moz-transform: scale(0.9, 0.9);
-}
-
-.btn-delete {	/* Styling for delete button */
-	background-color: #ECEFF1;
-	color: #212121;
-}
